@@ -1,4 +1,3 @@
-
 import React from 'react';
 
 const skills = [
@@ -9,9 +8,9 @@ const skills = [
 ];
 
 const Hero: React.FC = () => {
-  const handleScrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  const handleScrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault();
-    const targetElement = document.getElementById('contact');
+    const targetElement = document.getElementById(targetId);
     
     if (targetElement) {
       const header = document.querySelector('header');
@@ -48,13 +47,22 @@ const Hero: React.FC = () => {
             ))}
           </div>
         </div>
-        <a 
-          href="#contact" 
-          onClick={handleScrollToContact}
-          className="inline-block mt-8 bg-transparent border border-green text-green font-mono text-lg px-8 py-4 rounded hover:bg-green/10 transition-colors duration-300"
-        >
-          Get In Touch
-        </a>
+        <div className="flex flex-wrap items-center gap-4 mt-8">
+          <a 
+            href="#contact" 
+            onClick={(e) => handleScrollToSection(e, 'contact')}
+            className="inline-block bg-transparent border border-green text-green font-mono text-lg px-8 py-4 rounded hover:bg-green/10 transition-colors duration-300"
+          >
+            Get In Touch
+          </a>
+          <a 
+            href="#skills" 
+            onClick={(e) => handleScrollToSection(e, 'skills')}
+            className="inline-block text-green font-mono text-lg px-8 py-4 rounded hover:bg-green/10 underline-offset-4 hover:underline"
+          >
+            View My Skills
+          </a>
+        </div>
       </div>
     </section>
   );

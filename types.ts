@@ -17,6 +17,7 @@ export interface Project {
   title: string;
   description: string;
   technologies: string[];
+  keywords?: string[];
   imageUrl: string;
   githubUrl?: string;
   liveUrl?: string;
