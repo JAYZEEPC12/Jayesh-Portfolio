@@ -60,7 +60,7 @@ const Hero: React.FC = () => {
             onClick={(e) => handleScrollToSection(e, 'skills')}
             className="inline-block text-green font-mono text-lg px-8 py-4 rounded hover:bg-green/10 underline-offset-4 hover:underline"
           >
-            View My Skills
+            View My Skills & Competencies
           </a>
         </div>
       </div>

@@ -43,7 +43,7 @@ const Header: React.FC = () => {
   const navLinks = [
     { href: '#experience', label: 'Experience' },
     { href: '#education', label: 'Education' },
-    { href: '#skills', label: 'Skills' },
+    { href: '#skills', label: 'Skills & Competencies' },
     { href: '#projects', label: 'Projects' },
     { href: '#contact', label: 'Contact' },
   ];
