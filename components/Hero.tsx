@@ -21,7 +21,7 @@ const Hero: React.FC = () => {
   return (
     <section id="hero" className="min-h-[calc(100vh-80px)] flex items-center py-20">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid md:grid-cols-5 gap-16 items-start">
+        <div className="grid md:grid-cols-5 gap-16 items-center">
           <div className="md:col-span-3 text-center md:text-left order-2 md:order-1">
             <p className="text-green font-mono mb-4 text-lg">Hi, my name is</p>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-heading tracking-[0.5px] text-lightest-slate">
@@ -44,11 +44,11 @@ const Hero: React.FC = () => {
                 className="relative rounded-full w-full h-full object-cover border-4 border-green/50 shadow-xl"
               />
             </div>
-            <div className="mt-8 text-center">
+            <div className="mt-4 text-center">
                 <a 
                     href="#skills" 
                     onClick={handleScrollToSkills}
-                    className="group inline-flex items-center bg-transparent border border-green text-green font-mono text-base px-6 py-3 rounded hover:bg-green/10 transition-colors duration-300"
+                    className="group inline-flex items-center bg-transparent border border-green text-green font-mono text-base px-6 py-3 rounded hover:bg-green/10 transition-colors duration-300 whitespace-nowrap"
                     aria-label="View my skills and competencies"
                 >
                     View My Skills & Competencies

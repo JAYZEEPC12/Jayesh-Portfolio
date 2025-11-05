@@ -39,7 +39,6 @@ const skillsData = {
     'Agentic Workflows',
     'Lovable',
     'Bolt',
-    'Antigenic Workflows',
     'AI Agents',
   ],
 };

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Section from './Section';
 import LinkedInIcon from './icons/LinkedInIcon';
@@ -16,7 +15,7 @@ const Contact: React.FC = () => {
           href="https://wa.me/918939354500" 
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-transparent border border-green text-green font-mono text-lg px-8 py-4 rounded hover:bg-green/10 transition-colors duration-300"
+          className="inline-block bg-transparent border border-green text-green font-mono text-base px-6 py-3 rounded hover:bg-green/10 transition-colors duration-300"
         >
           Say Hello
         </a>

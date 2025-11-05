@@ -28,6 +28,18 @@ const certifications: Certification[] = [
     name: 'Practical Application of Gen AI for Project Managers',
     issuer: 'PMI',
   },
+  {
+    name: 'Product Management',
+    issuer: 'IBM & Coursera',
+  },
+  {
+    name: 'Certified Product Manager',
+    issuer: 'gsdcouncil.org',
+  },
+  {
+    name: 'Product-Led Growth',
+    issuer: 'Product School',
+  },
 ];
 
 const Education: React.FC = () => {
@@ -47,7 +59,7 @@ const Education: React.FC = () => {
 
         <div>
           <h3 className="text-xl font-semibold font-heading tracking-[0.5px] text-lightest-slate mb-4">Certifications</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {certifications.map((cert, index) => (
               <div key={index} className="bg-light-navy p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
                 <h3 className="text-lg font-bold font-heading tracking-[0.5px] text-lightest-slate">{cert.name}</h3>
