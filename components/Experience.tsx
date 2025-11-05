@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import type { Experience } from '../types';
 import Section from './Section';
@@ -65,7 +64,7 @@ const Experience: React.FC = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <Section id="experience" title="Where I've Worked">
+    <Section id="experience" title="Where I've Worked" className="pt-0 md:pt-0">
       <div className="flex flex-col md:flex-row gap-8">
         <div className="flex md:flex-col overflow-x-auto md:overflow-x-visible">
           {experiences.map((exp, index) => (

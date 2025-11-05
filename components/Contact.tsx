@@ -7,7 +7,7 @@ import PhoneIcon from './icons/PhoneIcon';
 
 const Contact: React.FC = () => {
   return (
-    <Section id="contact" title="Get In Touch">
+    <Section id="contact" title="Get In Touch" className="pt-0 md:pt-0">
       <div className="max-w-2xl mx-auto text-center">
         <p className="text-lg text-slate mb-6">
           I'm currently open to new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll do my best to get back to you!

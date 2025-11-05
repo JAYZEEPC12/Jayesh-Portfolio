@@ -1,4 +1,3 @@
-
 import React from 'react';
 import type { Education } from '../types';
 import Section from './Section';
@@ -33,7 +32,7 @@ const certifications: Certification[] = [
 
 const Education: React.FC = () => {
   return (
-    <Section id="education" title="Education & Certifications">
+    <Section id="education" title="Education & Certifications" className="pt-0 md:pt-0">
        <div className="space-y-12">
         <div>
           <h3 className="text-xl font-semibold font-heading tracking-[0.5px] text-lightest-slate mb-4">Degree</h3>

@@ -21,4 +21,5 @@ export interface Project {
   imageUrl: string;
   githubUrl?: string;
   liveUrl?: string;
+  prototypeLinks?: { label: string; url: string }[];
 }

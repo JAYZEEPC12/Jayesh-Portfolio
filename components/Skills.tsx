@@ -25,23 +25,27 @@ const skillsData = {
     'SaaS Operations',
     'Effective Communication',
     'Conflict Resolution',
+    'Decision-Making & Prioritization',
+    'Vision Setting & Storytelling',
+    'Customer-Centric Collaboration',
   ],
   toolsAndTechnologies: [
     'JIRA & Confluence',
     'CRM Systems (e.g., Salesforce)',
     'Analytics (Google Analytics, Mixpanel)',
-    'Feedback Tools (e.g., UserVoice)',
     'VoIP Technologies',
     'Figma',
     'Vibe Coding',
     'Agentic Workflows',
     'Lovable',
     'Bolt',
+    'Antigenic Workflows',
+    'AI Agents',
   ],
 };
 
-const SkillCategory: React.FC<{ title: string; skills: string[] }> = ({ title, skills }) => (
-  <div className="bg-light-navy p-6 rounded-lg shadow-lg h-full">
+const SkillCategory: React.FC<{ title: string; skills: string[]; id?: string }> = ({ title, skills, id }) => (
+  <div id={id} className="bg-light-navy p-6 rounded-lg shadow-lg h-full">
     <h3 className="text-xl font-bold font-heading tracking-[0.5px] text-lightest-slate mb-4">{title}</h3>
     <ul className="space-y-2">
       {skills.map((skill, i) => (
@@ -56,11 +60,11 @@ const SkillCategory: React.FC<{ title: string; skills: string[] }> = ({ title, s
 
 const Skills: React.FC = () => {
   return (
-    <Section id="skills" title="Skills & Competencies">
+    <Section id="skills" title="Skills & Competencies" className="pt-0 md:pt-0">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <SkillCategory title="Product Management" skills={skillsData.productManagement} />
         <SkillCategory title="Leadership & Collaboration" skills={skillsData.leadershipAndCollaboration} />
-        <SkillCategory title="Tools & Technologies" skills={skillsData.toolsAndTechnologies} />
+        <SkillCategory id="tools-and-technologies" title="Tools & Technologies" skills={skillsData.toolsAndTechnologies} />
       </div>
     </Section>
   );

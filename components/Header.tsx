@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from 'react';
 
 const NavLink: React.FC<{ href: string; children: React.ReactNode; onClick: () => void }> = ({ href, children, onClick }) => {
@@ -22,7 +23,7 @@ const NavLink: React.FC<{ href: string; children: React.ReactNode; onClick: () =
   };
 
   return (
-    <a href={href} onClick={handleLinkClick} className="text-slate hover:text-green transition-colors duration-300 py-2 md:py-0">
+    <a href={href} onClick={handleLinkClick} className="text-bright-cyan hover:text-green transition-colors duration-300 py-2 md:py-0">
       {children}
     </a>
   );
@@ -45,6 +46,7 @@ const Header: React.FC = () => {
     { href: '#education', label: 'Education' },
     { href: '#skills', label: 'Skills & Competencies' },
     { href: '#projects', label: 'Projects' },
+    { href: '#tools-and-technologies', label: 'Tools & Technologies' },
     { href: '#contact', label: 'Contact' },
   ];
 

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import type { Project } from '../types';
 import Section from './Section';
 import GitHubIcon from './icons/GitHubIcon';
@@ -23,6 +23,10 @@ const projects: Project[] = [
       'User Pain Points'
     ],
     imageUrl: 'https://assets.experience.com/campaigns/15933/Screenshot2025-10-29at2_1761685104263.26_1761685104263.11AM_1761685104263.png',
+    prototypeLinks: [
+      { label: 'Guided Onboarding Experience', url: 'https://goodbug-welcome-waggle.lovable.app/' },
+      { label: 'Habit-Coaching App "Bug Buddy"', url: 'https://bug-buddy-progress.lovable.app/' }
+    ]
   },
   {
     title: 'Zomato - OKR Playbook: Driving User Retention and Delivery Excellence',
@@ -60,6 +64,9 @@ const projects: Project[] = [
         'My Kind of Coach'
     ],
     imageUrl: 'https://assets.experience.com/campaigns/15933/Screenshot2025-10-29at11_1761760768648.29_1761760768648.06PM_1761760768648.png',
+    prototypeLinks: [
+      { label: 'Trainer Matching Prototype', url: 'https://vitafit-heart-connect.lovable.app' }
+    ]
   },
     {
     title: 'Prime Video India: Rebuilding Trust and a Strategy for Retention',
@@ -82,6 +89,9 @@ const projects: Project[] = [
       'Viewer Trust',
     ],
     imageUrl: 'https://assets.experience.com/campaigns/15933/Screenshot%202025-07-01%20at%2010_1751387851786.06_1751387851786.26PM_1751387851786.png',
+    prototypeLinks: [
+      { label: 'Ad-Break Experience Prototype', url: 'https://ad-break-balm.lovable.app' }
+    ]
   },
   {
     title: 'NoBroker: Consumer Services-Expanding Beyond Real Estate',
@@ -126,6 +136,8 @@ const projects: Project[] = [
 ];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const [showPrototypes, setShowPrototypes] = useState(false);
+
   return (
     <div className="group bg-light-navy rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl h-full flex flex-col">
       <div className="relative overflow-hidden">
@@ -142,6 +154,36 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               </div>
           </div>
           <p className="text-slate mb-4 text-sm">{project.description}</p>
+          
+          {project.prototypeLinks && (
+            <div className="mb-4">
+              <button 
+                onClick={() => setShowPrototypes(!showPrototypes)}
+                className="inline-flex items-center bg-navy text-green font-mono text-sm px-4 py-2 rounded hover:bg-green/10 transition-colors duration-300 border border-green/50 w-full text-left justify-between"
+                aria-expanded={showPrototypes}
+              >
+                <span>View Prototypes</span>
+                <svg className={`w-4 h-4 transform transition-transform ${showPrototypes ? 'rotate-180' : 'rotate-0'}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7"></path></svg>
+              </button>
+              {showPrototypes && (
+                <div className="mt-2 pl-4 border-l-2 border-lightest-navy/50 space-y-2 py-2">
+                  {project.prototypeLinks.map((link, i) => (
+                    <a 
+                      key={i}
+                      href={link.url} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="flex items-center text-slate hover:text-green transition-colors duration-300 text-sm group"
+                    >
+                      <ExternalLinkIcon className="w-4 h-4 mr-2" />
+                      <span className="group-hover:underline underline-offset-4">{link.label}</span>
+                    </a>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+
           {project.keywords && (
             <div className="flex flex-wrap gap-2 mb-4">
               {project.keywords.map((keyword, i) => (
@@ -164,7 +206,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
 
 const Projects: React.FC = () => {
   return (
-    <Section id="projects" title="Things I've Built">
+    <Section id="projects" title="Things I've Built" className="pt-0 md:pt-0">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
         {projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
