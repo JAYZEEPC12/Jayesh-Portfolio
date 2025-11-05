@@ -42,7 +42,7 @@ const skillsData = {
 
 const SkillCategory: React.FC<{ title: string; skills: string[] }> = ({ title, skills }) => (
   <div className="bg-light-navy p-6 rounded-lg shadow-lg h-full">
-    <h3 className="text-xl font-bold text-lightest-slate mb-4">{title}</h3>
+    <h3 className="text-xl font-bold font-heading tracking-[0.5px] text-lightest-slate mb-4">{title}</h3>
     <ul className="space-y-2">
       {skills.map((skill, i) => (
         <li key={i} className="flex items-start">

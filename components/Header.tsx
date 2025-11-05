@@ -52,7 +52,7 @@ const Header: React.FC = () => {
     <header className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-light-navy/80 backdrop-blur-sm shadow-lg' : 'bg-navy'}`}>
       <div className="container mx-auto px-6 md:px-12 lg:px-24">
         <div className="flex items-center justify-between h-20">
-          <a href="#" className="text-xl font-bold text-lightest-slate hover:text-green transition-colors">
+          <a href="#" className="text-xl font-bold font-heading tracking-[0.5px] text-lightest-slate hover:text-green transition-colors">
             Jayesh PC's Portfolio
           </a>
           

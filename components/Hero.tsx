@@ -29,10 +29,10 @@ const Hero: React.FC = () => {
     <section id="hero" className="min-h-[calc(100vh-80px)] flex items-center justify-center py-20">
       <div className="max-w-4xl text-left">
         <p className="text-green font-mono mb-4 text-lg">Hi, my name is</p>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-lightest-slate">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-heading tracking-[0.5px] text-lightest-slate">
           Jayesh PC.
         </h1>
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-slate mt-2">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading tracking-[0.5px] text-slate mt-2">
           I build customer-centric products.
         </h2>
         <p className="mt-6 max-w-2xl text-lg text-slate">

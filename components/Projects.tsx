@@ -135,7 +135,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
       <div className="p-6 flex flex-col flex-grow">
         <div>
           <div className="flex justify-between items-center mb-2">
-              <h3 className="text-xl font-bold text-lightest-slate group-hover:text-green transition-colors duration-300">{project.title}</h3>
+              <h3 className="text-xl font-bold font-heading tracking-[0.5px] text-lightest-slate group-hover:text-green transition-colors duration-300">{project.title}</h3>
               <div className="flex items-center space-x-4">
                   {project.githubUrl && <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="text-slate hover:text-green"><GitHubIcon /></a>}
                   {project.liveUrl && <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-slate hover:text-green"><ExternalLinkIcon /></a>}

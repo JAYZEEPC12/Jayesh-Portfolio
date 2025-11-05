@@ -85,7 +85,7 @@ const Experience: React.FC = () => {
         <div className="flex-1 min-h-[300px]">
           {experiences.map((exp, index) => (
             <div key={index} className={`${activeTab === index ? 'block' : 'hidden'}`}>
-              <h3 className="text-xl font-bold text-lightest-slate">
+              <h3 className="text-xl font-bold font-heading tracking-[0.5px] text-lightest-slate">
                 {exp.role} <span className="text-green">@ {exp.company}</span>
               </h3>
               <p className="font-mono text-sm mb-4">{exp.duration}</p>
