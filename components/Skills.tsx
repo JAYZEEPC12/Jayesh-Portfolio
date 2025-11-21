@@ -40,6 +40,8 @@ const skillsData = {
     'Lovable',
     'Bolt',
     'AI Agents',
+    'APIs',
+    'Postman',
   ],
 };
 
