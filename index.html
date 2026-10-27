@@ -1,49 +1,135 @@
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Jayesh PC - Product Management</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Jayesh PC | Product Management & Operations Leader</title>
+    <meta name="title" content="Jayesh PC | Product Management & Operations Leader" />
+    <meta name="description" content="Portfolio of Jayesh PC — Customer Support & Operations Leader transitioning into Product Management. 12+ years turning customer insights and data into scalable SaaS products, retention loops, and OKR frameworks." />
+    <meta name="keywords" content="Jayesh PC, Product Management, SaaS Product Manager, Customer Support Leader, Voice of Customer, Growth Loops, Retention, OKRs, Airtribe, Product Portfolio" />
+    <meta name="author" content="Jayesh PC" />
+    <meta name="theme-color" content="#070a11" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/JAYZEEPC12/Jayesh-Portfolio" />
+    <meta property="og:title" content="Jayesh PC | Product Management & Operations Leader" />
+    <meta property="og:description" content="12+ years experience bridging Customer Empathy, Data-Driven Strategy, and Product Excellence." />
+    <meta property="og:image" content="https://assets.experience.com/campaigns/15933/Screenshot2025-10-23at3_1762365467323.22_1762365467323.05AM_1762365467323.png" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CDN with Extended Palette & Theme Config -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
-              'navy': '#000000',
-              'light-navy': '#1a1a1a',
-              'lightest-navy': '#2c2c2c',
-              'slate': '#8892b0',
-              'light-slate': '#a8b2d1',
-              'lightest-slate': '#ccd6f6',
-              'white': '#e6f1ff',
-              'green': '#64ffda',
-              'bright-cyan': '#22d3ee',
+              // Modern obsidian / dark slate hierarchy
+              'dark-base': '#070a11',
+              'dark-surface': '#0c111d',
+              'dark-card': '#111726',
+              'dark-card-hover': '#162035',
+              'dark-border': '#1e293b',
+              'dark-border-subtle': 'rgba(255, 255, 255, 0.08)',
+              
+              // Electric accents
+              'emerald-accent': '#10b981',
+              'cyan-accent': '#06b6d4',
+              'indigo-accent': '#6366f1',
+              
+              // Backward compatibility with previous theme names
+              'navy': '#070a11',
+              'light-navy': '#0f172a',
+              'lightest-navy': '#1e293b',
+              'slate': '#94a3b8',
+              'light-slate': '#cbd5e1',
+              'lightest-slate': '#f1f5f9',
+              'white': '#ffffff',
+              'green': '#10b981',
+              'bright-cyan': '#06b6d4',
             },
             fontFamily: {
               'sans': ['Inter', 'sans-serif'],
-              'mono': ['"SF Mono"', '"Fira Code"', '"Fira Mono"', '"Roboto Mono"', 'monospace'],
-              'heading': ['Raleway', 'sans-serif'],
+              'heading': ['Outfit', 'sans-serif'],
+              'mono': ['"JetBrains Mono"', '"SF Mono"', 'monospace'],
+            },
+            boxShadow: {
+              'glow-emerald': '0 0 25px -5px rgba(16, 185, 129, 0.25)',
+              'glow-cyan': '0 0 25px -5px rgba(6, 182, 212, 0.25)',
+              'glow-card': '0 10px 30px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(16, 185, 129, 0.1)',
             },
           },
         },
       }
     </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Raleway:wght@600;700&display=swap" rel="stylesheet">
-  <script type="importmap">
-{
-  "imports": {
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "react/": "https://aistudiocdn.com/react@^19.2.0/",
-    "react": "https://aistudiocdn.com/react@^19.2.0"
-  }
-}
-</script>
-</head>
-  <body class="bg-navy text-slate font-sans leading-[1.6]">
+    
+    <style>
+      /* Custom background subtle mesh and typography styles */
+      body {
+        background-color: #070a11;
+        background-image: 
+          radial-gradient(at 15% 15%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
+          radial-gradient(at 85% 25%, rgba(6, 182, 212, 0.04) 0px, transparent 50%),
+          radial-gradient(at 50% 80%, rgba(99, 102, 241, 0.04) 0px, transparent 50%);
+        background-attachment: fixed;
+      }
+
+      /* Custom modern scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #070a11;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1e293b;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #334155;
+      }
+
+      /* Glassmorphism helpers */
+      .glass-card {
+        background: rgba(17, 23, 38, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+      }
+      .glass-card:hover {
+        border-color: rgba(16, 185, 129, 0.3);
+      }
+
+      .text-gradient {
+        background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .text-gradient-accent {
+        background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+      .animate-float {
+        animation: floatSlow 6s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body class="bg-dark-base text-slate font-sans leading-[1.6] antialiased selection:bg-emerald-accent/20 selection:text-emerald-accent">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
